@@ -35,6 +35,8 @@ seeds:
 
 models:
   jaffle_shop:
+    +persist_docs:
+      relation: true
     staging:
       +materialized: view
     marts:
