@@ -22,7 +22,7 @@ clean-targets:
   - "dbt_packages"
 
 vars:
-  "dbt_date:time_zone": "America/Los_Angeles"
+  "dbt_date:time_zone": "Australia/Melbourne"
 
 flags:
   use_materialization_v2: true
