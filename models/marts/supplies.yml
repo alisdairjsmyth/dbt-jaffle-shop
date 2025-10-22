@@ -1,3 +1,11 @@
+models:
+  - name: supplies
+    columns:
+      - name: supply_uuid
+        constraints:
+          - type: primary_key
+          - type: not_null
+
 semantic_models:
   #The name of the semantic model.
   - name: supplies
