@@ -4,7 +4,7 @@ models:
       - name: supply_uuid
         constraints:
           - type: primary_key
-            warn_unenforced: warn
+            warn_unenforced: false
           - type: not_null
 
 semantic_models:
