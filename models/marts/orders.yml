@@ -13,6 +13,7 @@ models:
         description: The unique key of the orders mart.
         constraints:
           - type: primary_key
+            warn_unenforced: false
           - type: not_null
         data_tests:
           - not_null
