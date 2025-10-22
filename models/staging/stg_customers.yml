@@ -4,6 +4,9 @@ models:
     columns:
       - name: customer_id
         description: The unique key for each customer.
+        constraints:
+          - type: primary_key
+          - type: not_null
         data_tests:
           - not_null
           - unique
