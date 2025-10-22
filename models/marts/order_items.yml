@@ -1,10 +1,5 @@
 models:
   - name: order_items
-    constraints:
-      - type: foreign_key
-        columns: product_id
-        to: ref('products')
-        to_columns: product_id
     columns:
       - name: order_item_id
         constraints:
