@@ -24,10 +24,6 @@ models:
             to_columns: location_id
       - name: customer_id
         description: The foreign key relating to the customer who placed the order.
-        constraints:
-          - type: foreign_key
-            to: ref('customers')
-            to_columns: customer_id
         data_tests:
           - relationships:
               arguments:
