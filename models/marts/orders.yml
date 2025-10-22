@@ -18,10 +18,6 @@ models:
           - not_null
           - unique
       - name: location_id
-        constraints:
-          - type: foreign_key
-            to: ref('locations')
-            to_columns: location_id
       - name: customer_id
         description: The foreign key relating to the customer who placed the order.
         data_tests:
