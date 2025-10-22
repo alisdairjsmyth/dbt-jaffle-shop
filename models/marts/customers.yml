@@ -10,12 +10,15 @@ models:
         description: The unique key of the orders mart.
         constraints:
           - type: primary_key
+            warn_unenforced: false
           - type: not_null
         data_tests:
           - not_null
           - unique
       - name: customer_name
         description: Customers' full name.
+        constraints:
+          - type: not_null
       - name: count_lifetime_orders
         description: Total number of orders a customer has ever placed.
       - name: first_ordered_at
