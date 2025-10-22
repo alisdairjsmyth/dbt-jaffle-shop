@@ -19,6 +19,9 @@ models:
                 field: order_id
       - name: product_id
         constraints:
+          - type: foreign_key
+            to: ref('products')
+            to_columns: product_id
           - type: not_null
 
 unit_tests:
