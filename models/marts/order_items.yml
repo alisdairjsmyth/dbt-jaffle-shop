@@ -4,6 +4,7 @@ models:
       - name: order_item_id
         constraints:
           - type: primary_key
+            warn_unenforced: false
           - type: not_null
         data_tests:
           - not_null
