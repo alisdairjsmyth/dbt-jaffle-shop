@@ -2,15 +2,29 @@ models:
   - name: order_items
     columns:
       - name: order_item_id
+        constraints:
+          - type: primary_key
+          - type: not_null
         data_tests:
           - not_null
           - unique
       - name: order_id
+        constraints:
+          - type: foreign_key
+            to: ref('orders')
+            to_columns: order_id
+          - type: not_null
         data_tests:
           - relationships:
               arguments:
                 to: ref('orders')
                 field: order_id
+      - name: product_id
+        constraints:
+          - type: foreign_key
+            to: ref('products')
+            to_columns: product_id
+          - type: not_null
 
 unit_tests:
   - name: test_supply_costs_sum_correctly
