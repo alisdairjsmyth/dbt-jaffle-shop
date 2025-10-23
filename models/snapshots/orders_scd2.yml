@@ -1,7 +1,7 @@
 snapshots:
   - name: orders_scd2
     relation: ref('stg_orders')
-    description:  Snapshot test
+    description:  SCD2 of Orders
     config:
       database: dbt
       schema: dbt_jaffle_shop
