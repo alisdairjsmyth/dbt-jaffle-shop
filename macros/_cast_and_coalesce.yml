@@ -1,0 +1,9 @@
+macros:
+  - name: _cast_and_coalesce
+    description: Wraps the passed column name with cast() and coalesce() SQL functions - to cast to string and default to an empty string.
+    config:
+      docs: false
+    arguments:
+      - name: column_name
+        type: string
+        description: Name of the column to be wrapped

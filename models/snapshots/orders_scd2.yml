@@ -1,11 +1,12 @@
 snapshots:
   - name: orders_scd2
-    relation: ref('stg_orders')
+    relation: ref('orders_md5')
     description:  SCD2 of Orders
     config:
       database: dbt
       schema: dbt_jaffle_shop
       strategy: check
       unique_key: order_id
-      check_cols: all
+      check_cols: 
+        - dbt_check_hash
       hard_deletes: ignore

@@ -1,0 +1,9 @@
+macros:
+  - name: _dbt_check_hash
+    description: Prepares a md5 function statement to be included in a model SQL statement. The function is applied across a column list.
+    config:
+      docs: false
+    arguments:
+      - name: column_list
+        type: list[string]
+        description: List of columns to be considered in the hash calculation.

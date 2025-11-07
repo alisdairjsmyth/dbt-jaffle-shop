@@ -1,0 +1,25 @@
+macros:
+  - name: query_for_scd2
+    description: >
+      Prepares a model SQL statement that can be used as the basis of snapshot 
+      using the check strategy. The statement includes a column `dbt_check_hash`
+      that is a md5 hash of the columns that would be the basis of the check.
+      In the snapshot definition - the resulting model should be referenced in 
+      relation property, and `check_cols` should be set to dbt_check_hash. i.e.
+
+      ``
+          - name: <string>
+            relation: ref()
+            config:
+              unique_key: <column_name_or_expression>
+              strategy: check
+              check_cols: dbt_check_hash
+      ``
+  
+    arguments:
+      - name: from
+        type: relation
+        description: a Relation (a `ref` or `source`) that is the basis of the model
+      - name: except
+        type: list[string]
+        description: (Optional) A list of columns to be excluded from `check_cols`
